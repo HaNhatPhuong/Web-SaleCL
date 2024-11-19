@@ -15,9 +15,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       sass: {
-        // Nếu bạn muốn sử dụng các biến mặc định cho Sass (ví dụ, global variables), có thể định nghĩa tại đây
-        additionalData: `@use '@styles/variables' as *;`, // thêm vào bất kỳ biến toàn cục nào ở đây
-        additionalData: `@use '@styles/mixin' as *;`, // thêm vào bất kỳ biến toàn cục nào ở đây
+        additionalData: `@use '@styles/variables' as *;`,
+        additionalData: `@use '@styles/mixin' as *;`,
+        additionalData: `@use '@styles/global' as *;`,
       },
     },
   },
