@@ -5,12 +5,14 @@ import Myheader from '@components/Header/Header';
 import Banner from '@components/Banner/Banner';
 import Homepage from '@components/Homepage/Homepage';
 import Info from '@components/Info/Info';
+import AdvanceHeading from '@components/AdvanceHeading/AdvanceHeading';
 
 function App() {
   return (
     <div>
-      <Homepage />
-      <Info />
+      <div>
+        <Homepage />
+      </div>
     </div>
   );
 }
