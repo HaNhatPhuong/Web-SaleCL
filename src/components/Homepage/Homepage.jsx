@@ -15,6 +15,7 @@ function Homepage() {
         <Info />
         <AdvanceHeading />
         <HeadingList />
+        <div style={{ height: '200px' }}></div>
       </div>
     </div>
   );

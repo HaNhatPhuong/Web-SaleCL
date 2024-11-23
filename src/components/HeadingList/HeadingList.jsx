@@ -1,24 +1,21 @@
 import CountdownTimer from '@components/CountdownTimer/CountdownTimer';
-import Mainlayout from '@components/Layout/Layout';
 import styles from './styles.module.scss';
 import CountdownBanner from '@components/CountdownBanner/CountdownBanner';
+import ProductItem from '@components/ProductItem/ProductItem';
+import MainLayout from '@components/Layout/Layout';
 
 function HeadingList() {
-  const { container, containerItems } = styles;
-  const targetDate = '2025-12-31T00:00:00';
+  const { container, containerItem } = styles;
   return (
-    <Mainlayout>
-      {/* <CountdownTimer targetDate={targetDate} /> */}
+    <MainLayout>
       <div className={container}>
-        <div>
-          <CountdownBanner />
-        </div>
-        <div className={containerItems}>
-          <div>1</div>
-          <div>2</div>
+        <CountdownBanner />
+        <div className={containerItem}>
+          <ProductItem />
+          <ProductItem />
         </div>
       </div>
-    </Mainlayout>
+    </MainLayout>
   );
 }
 

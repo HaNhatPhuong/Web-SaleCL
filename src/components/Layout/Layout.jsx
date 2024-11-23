@@ -1,7 +1,8 @@
 import styles from './styles.module.scss';
 
-function Mainlayout({ children }) {
+function MainLayout({ children }) {
   const { wrapLayout, container } = styles;
+
   return (
     <main className={wrapLayout}>
       <div className={container}>{children}</div>
@@ -9,4 +10,4 @@ function Mainlayout({ children }) {
   );
 }
 
-export default Mainlayout;
+export default MainLayout;
