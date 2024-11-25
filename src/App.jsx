@@ -1,19 +1,26 @@
-import Mainlayout from './components/Layout/Layout';
-import Myfooter from './components/Footer/Footer';
-import Button from './components/Button/Button';
-import Myheader from '@components/Header/Header';
-import Banner from '@components/Banner/Banner';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from '@components/Homepage/Homepage';
-import Info from '@components/Info/Info';
-import AdvanceHeading from '@components/AdvanceHeading/AdvanceHeading';
+import Blogs from '@components/Blogs/Blogs';
+import routers from '@/routers/routers';
+import { Suspense } from 'react';
 
 function App() {
   return (
-    <div>
-      <div>
-        <Homepage />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<div>loading...</div>}>
+        <Routes>
+          {routers.map((item, index) => {
+            return (
+              <Route
+                path={item.path}
+                element={<item.component />}
+                key={index}
+              />
+            );
+          })}
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

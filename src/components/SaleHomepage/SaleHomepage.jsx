@@ -1,38 +1,12 @@
 import Button from '@components/Button/Button';
 import styles from './styles.module.scss';
 import { useEffect, useRef, useState } from 'react';
-import useTranslateX from '@components/SaleHomepage/TranslateXImage';
+import useTranslateXImage from '@/hooks/useTranslateXImage ';
 
 function SaleHomepage() {
   const { container, title, des, boxBtn, boxImage, text } = styles;
-  const { translateXPosition } = useTranslateX();
-  // const useScrollHandling = () => {
+  const { translateXPosition } = useTranslateXImage();
 
-  //   return {
-  //     scrollDriction,
-  //     scrollPosition,
-  //   };
-  // };
-  // const useTranslateXImage = () => {
-  //   const { scrollPosition, scrollDriction } = useScrollHandling();
-  //   const [translateXPosition, setTranslateXPosition] = useState(80);
-
-  // const handleTranslateX = () => {
-  //   if (scrollDriction === 'down' && scrollPosition >= 1500) {
-  //     setTranslateXPosition(
-  //       translateXPosition <= 0 ? 0 : translateXPosition - 1
-  //     );
-  //   } else if (scrollDriction === 'up') {
-  //     setTranslateXPosition(
-  //       translateXPosition >= 80 ? 80 : translateXPosition + 1
-  //     );
-  //   }
-  // };
-
-  //   return {
-  //     translateXPosition,
-  //   };
-  // };
   return (
     <div className={container}>
       <div

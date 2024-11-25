@@ -6,6 +6,9 @@ import Logo from '../../assets/images/Logo-retina.png';
 import redLoadIcon from '../../assets/icons/svgs/reload.svg';
 import heartIcon from '../../assets/icons/svgs/heart.svg';
 import cartIcon from '../../assets/icons/svgs/cart.svg';
+import useScrollHandling from '@/hooks/useScrollHandling ';
+import classNames from 'classnames';
+import { useEffect, useState } from 'react';
 
 function Myheader() {
   const {
@@ -14,10 +17,25 @@ function Myheader() {
     containerHeader,
     containerBox,
     container,
+    fixedHeader,
+    topHeader,
+    boxCart,
+    quantity,
   } = styles;
 
+  const { scrollPosition } = useScrollHandling();
+  const [fixedPosition, setFixedPosition] = useState(false);
+
+  useEffect(() => {
+    setFixedPosition(scrollPosition > 80);
+  }, [scrollPosition]);
+
   return (
-    <div className={container}>
+    <div
+      className={classNames(container, topHeader, {
+        [fixedHeader]: fixedPosition,
+      })}
+    >
       <div className={containerHeader}>
         <div className={containerBox}>
           <div className={containerBoxIcon}>
