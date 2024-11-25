@@ -3,7 +3,7 @@ import redLoadIcon from '../../assets/icons/svgs/reload.svg';
 import heartIcon from '../../assets/icons/svgs/heart.svg';
 import cartIcon from '../../assets/icons/svgs/cart.svg';
 
-function ProductItem({ src, prevSrc, name, price }) {
+function ProductItem({ src, prevSrc, namee, price }) {
   const {
     boxImg,
     showImgWhenHover,
@@ -15,12 +15,8 @@ function ProductItem({ src, prevSrc, name, price }) {
   return (
     <div>
       <div className={boxImg}>
-        <img src='/src/assets/images/Image-15.1-min.jpg' alt='' />
-        <img
-          src='/src/assets/images/Image-15.2-min.jpg'
-          alt=''
-          className={showImgWhenHover}
-        />
+        <img src={src} />
+        <img src={prevSrc} alt='' className={showImgWhenHover} />
         <div className={showfncWhenHover}>
           <div className={boxIcon}>
             <img src={heartIcon} alt='' />
@@ -36,8 +32,8 @@ function ProductItem({ src, prevSrc, name, price }) {
           </div>
         </div>
       </div>
-      <div className={tittle}>10K Yellow Gold</div>
-      <div className={priceCL}>$99.99</div>
+      <div className={tittle}>{namee}</div>
+      <div className={priceCL}>${price}</div>
     </div>
   );
 }
