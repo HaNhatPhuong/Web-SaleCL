@@ -17,9 +17,13 @@
     color: $thr_color;
     font-weight: 300;
     text-align: center;
-    width: 460px;
+    width: 300px;
     line-height: 25px;
   }
+
+  // .text {
+  //   width: 460px;
+  // }
 
   .boxBtn {
     @include flex_box_custom(center, center, 0px);

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import useTranslateX from '@components/SaleHomepage/TranslateXImage';
 
 function SaleHomepage() {
-  const { container, title, des, boxBtn, boxImage } = styles;
+  const { container, title, des, boxBtn, boxImage, text } = styles;
   const { translateXPosition } = useTranslateX();
   // const useScrollHandling = () => {
 
@@ -39,12 +39,12 @@ function SaleHomepage() {
         className={boxImage}
         style={{
           transform: `translateX(${translateXPosition}px)`,
-          transition: 'transform 0.6s ease',
+          transition: 'transform 0.4s ease',
         }}
       >
         <img src='/src/assets/images/Salehomepage1.jpeg' alt='' />
       </div>
-      <div>
+      <div className={text}>
         <h2 className={title}>Sale of the year</h2>
         <p className={des}>
           Libero sed faucibus facilisis fermentum. Est nibh sed massa sodales.

@@ -20,13 +20,13 @@ const useTranslateX = () => {
     setScrollPosition(currentScrollPosition);
   };
   const handleTranslateX = () => {
-    if (scrollDriction === 'down' && scrollPosition >= 1300) {
+    if (scrollDriction === 'down' && scrollPosition >= 1500) {
       setTranslateXPosition(
         translateXPosition <= 0 ? 0 : translateXPosition - 1
       );
     } else if (scrollDriction === 'up') {
       setTranslateXPosition(
-        translateXPosition >= 50 ? 50 : translateXPosition + 1
+        translateXPosition >= 20 ? 20 : translateXPosition + 1
       );
     }
   };
