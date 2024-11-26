@@ -53,13 +53,7 @@ function Myheader() {
           {/* menu start */}
           <div className={containerMenu}>
             {dataMenu.slice(0, 3).map((item) => {
-              return (
-                <Menu
-                  content={item.content}
-                  href={item.href}
-                  setIsOpen={setIsOpen}
-                />
-              );
+              return <Menu content={item.content} href={item.href} />;
             })}
           </div>
         </div>
