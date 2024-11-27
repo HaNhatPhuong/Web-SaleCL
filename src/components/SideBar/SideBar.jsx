@@ -6,7 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import Login from '@components/ContentSideBar/Login/Login';
 import Compare from '@components/ContentSideBar/Compare/Compare';
 import Cart from '@components/ContentSideBar/Cart/Cart';
-import Wishlist from '@components/ContentSideBar/WishList/WishList';
+import Wishlist from '@components/ContentSideBar/WishLish/WishList';
 function SideBar() {
   const { container, overlay, sideBar, slideSideBar, boxIcon } = styles;
   const { isOpen, setIsOpen, type } = useContext(SideBarContext);

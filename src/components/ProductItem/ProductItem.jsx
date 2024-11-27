@@ -3,6 +3,10 @@ import redLoadIcon from '../../assets/icons/svgs/reload.svg';
 import heartIcon from '../../assets/icons/svgs/heart.svg';
 import cartIcon from '@icons/svgs/cart.svg';
 import eyes from '../../assets/icons/svgs/eyes.svg';
+import { TfiReload } from 'react-icons/tfi';
+import { CiHeart } from 'react-icons/ci';
+import { PiShoppingCartLight } from 'react-icons/pi';
+import { PiEyeLight } from 'react-icons/pi';
 
 function ProductItem({ src, prevSrc, namee, price }) {
   const {
@@ -20,16 +24,16 @@ function ProductItem({ src, prevSrc, namee, price }) {
         <img src={prevSrc} alt='' className={showImgWhenHover} />
         <div className={showfncWhenHover}>
           <div className={boxIcon}>
-            <img src={heartIcon} alt='' />
+            <CiHeart size={25} />
           </div>
           <div className={boxIcon}>
-            <img src={cartIcon} alt='' />
+            <PiShoppingCartLight size={25} />
           </div>
           <div className={boxIcon}>
-            <img src={redLoadIcon} alt='' />
+            <TfiReload size={20} />
           </div>
           <div className={boxIcon}>
-            <img src={eyes} alt='' />
+            <PiEyeLight size={25} />
           </div>
         </div>
       </div>

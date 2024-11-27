@@ -6,7 +6,6 @@ import Logo from '../../assets/images/Logo-retina.png';
 import { TfiReload } from 'react-icons/tfi';
 import { CiHeart } from 'react-icons/ci';
 import { PiShoppingCartLight } from 'react-icons/pi';
-import cartIcon from '../../assets/icons/svgs/cart.svg';
 import useScrollHandling from '@/hooks/useScrollHandling ';
 import classNames from 'classnames';
 import { useContext, useEffect, useState } from 'react';
