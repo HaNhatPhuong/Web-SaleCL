@@ -18,9 +18,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       sass: {
-        additionalData: `@use '@styles/variables' as *;`,
-        additionalData: `@use '@styles/mixin' as *;`,
-        additionalData: `@use '@styles/global' as *;`,
+        additionalData: `
+          @use '@styles/variables' as *;
+          @use '@styles/mixin' as *;
+          @use '@styles/global' as *;
+        `,
       },
     },
   },
