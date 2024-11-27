@@ -3,8 +3,9 @@ import { dataBoxicon, dataMenu } from './BoxIcon/contants';
 import Menu from './Menu/Menu';
 import styles from './styles.module.scss';
 import Logo from '../../assets/images/Logo-retina.png';
-import redLoadIcon from '../../assets/icons/svgs/reload.svg';
-import heartIcon from '../../assets/icons/svgs/heart.svg';
+import { TfiReload } from 'react-icons/tfi';
+import { CiHeart } from 'react-icons/ci';
+import { PiShoppingCartLight } from 'react-icons/pi';
 import cartIcon from '../../assets/icons/svgs/cart.svg';
 import useScrollHandling from '@/hooks/useScrollHandling ';
 import classNames from 'classnames';
@@ -27,9 +28,12 @@ function Myheader() {
   const { scrollPosition } = useScrollHandling();
   const [fixedPosition, setFixedPosition] = useState(false);
 
-  const { isOpen, setIsOpen } = useContext(SideBarContext);
+  const { setIsOpen, setType } = useContext(SideBarContext);
 
-  console.log(isOpen);
+  const handleOpenSideBar = (type) => {
+    setIsOpen(true);
+    setType(type);
+  };
 
   useEffect(() => {
     setFixedPosition(scrollPosition > 80);
@@ -62,7 +66,7 @@ function Myheader() {
         <div>
           <img
             src={Logo}
-            alt=''
+            alt='Logo'
             style={{
               width: '153px',
               height: '53px',
@@ -78,16 +82,19 @@ function Myheader() {
                 <Menu
                   content={item.content}
                   href={item.href}
-                  setIsOpen={setIsOpen}
+                  // setIsOpen={setIsOpen}
                 />
               );
             })}
           </div>
           {/*  */}
           <div className={containerBoxIcon}>
-            <img width={26} height={26} src={redLoadIcon} alt='redLoadIcon' />
-            <img width={26} height={26} src={heartIcon} alt='heartIcon' />
-            <img width={26} height={26} src={cartIcon} alt='cartIcon' />
+            <TfiReload size={20} onClick={() => handleOpenSideBar('compare')} />
+            <CiHeart size={28} onClick={() => handleOpenSideBar('wishlist')} />
+            <PiShoppingCartLight
+              size={26}
+              onClick={() => handleOpenSideBar('cart')}
+            />
           </div>
         </div>
       </div>
