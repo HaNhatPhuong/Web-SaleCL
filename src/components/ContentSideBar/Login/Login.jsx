@@ -1,9 +1,8 @@
-import InputCommon from '@components/InputCommon/InputCommon';
-import styles from './styles.module.scss';
 import Button from '@components/Button/Button';
+import InputCommon from '@components/InputCommon/InputCommon';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Value } from 'sass';
+import styles from './styles.module.scss';
 function Login() {
   const { container, title, boxRememberMe, lostPw } = styles;
   const formik = useFormik({

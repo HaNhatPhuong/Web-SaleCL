@@ -1,5 +1,5 @@
-import styles from './styles.module.scss';
 import Mainlayout from '@components/Layout/Layout';
+import styles from './styles.module.scss';
 
 function AdvanceHeading() {
   const { container, headline, containerMiddleBox, title, des } = styles;
