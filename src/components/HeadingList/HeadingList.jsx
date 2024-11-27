@@ -1,8 +1,7 @@
-import CountdownTimer from '@components/CountdownTimer/CountdownTimer';
-import styles from './styles.module.scss';
 import CountdownBanner from '@components/CountdownBanner/CountdownBanner';
-import ProductItem from '@components/ProductItem/ProductItem';
 import MainLayout from '@components/Layout/Layout';
+import ProductItem from '@components/ProductItem/ProductItem';
+import styles from './styles.module.scss';
 
 function HeadingList({ data }) {
   const { container, containerItem } = styles;

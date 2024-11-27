@@ -1,8 +1,8 @@
+import Button from '@components/Button/Button';
 import HeaderSideBar from '@components/ContentSideBar/components/HeaderSideBar/HeaderSideBar';
+import ItemProducts from '@components/ContentSideBar/components/ItemProducts/ItemProducts';
 import { CiHeart } from 'react-icons/ci';
 import styles from './styles.module.scss';
-import ItemProducts from '@components/ContentSideBar/components/ItemProducts/ItemProducts';
-import Button from '@components/Button/Button';
 
 function Wishlist() {
   const { container, boxContent, boxBtn } = styles;

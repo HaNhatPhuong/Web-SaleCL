@@ -1,7 +1,7 @@
-import styles from '../styles.module.scss';
 import fbIcon from '../../../assets/icons/svgs/fbicon.svg';
 import igIcon from '../../../assets/icons/svgs/igicon.svg';
 import ytbIcon from '../../../assets/icons/svgs/ytbicon.svg';
+import styles from '../styles.module.scss';
 function BoxIcon({ type, href }) {
   const { Boxicon } = styles;
 

@@ -1,6 +1,6 @@
 import MainLayout from '@components/Layout/Layout';
-import styles from './styles.module.scss';
 import ProductItem from '@components/ProductItem/ProductItem';
+import styles from './styles.module.scss';
 
 function PopularProduct({ data }) {
   const { container } = styles;

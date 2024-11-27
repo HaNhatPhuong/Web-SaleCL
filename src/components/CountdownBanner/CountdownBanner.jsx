@@ -1,7 +1,6 @@
-import styles from './styles.module.scss';
-import CountdownTimer from '@components/CountdownTimer/CountdownTimer';
 import Button from '@components/Button/Button';
-import Mainlayout from '@components/Layout/Layout';
+import CountdownTimer from '@components/CountdownTimer/CountdownTimer';
+import styles from './styles.module.scss';
 function CountdownBanner() {
   const { container, containerTimmer, title, boxBtn } = styles;
   const targetDate = '2025-12-31T00:00:00';

@@ -1,5 +1,4 @@
 import styles from '../styles.module.scss';
-import Truck from '../../../assets/icons/svgs/truck.svg';
 
 function Infocard({ content, discsription, src }) {
   const { containerCard, containerContent, tittle, des } = styles;

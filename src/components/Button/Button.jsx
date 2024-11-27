@@ -1,5 +1,5 @@
-import styles from './styles.module.scss';
 import classNames from 'classnames';
+import styles from './styles.module.scss';
 
 function Button({ content, isPriamry = true, ...props }) {
   const { btn, primaryBtn, secondaryBtn } = styles;

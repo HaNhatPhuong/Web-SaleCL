@@ -1,7 +1,7 @@
-import Truck from '../../assets/icons/svgs/truck.svg';
-import Debitcard from '../../assets/icons/svgs/Debitcard.svg';
 import Box from '../../assets/icons/svgs/Box.svg';
 import Chat from '../../assets/icons/svgs/Chat.svg';
+import Debitcard from '../../assets/icons/svgs/Debitcard.svg';
+import Truck from '../../assets/icons/svgs/truck.svg';
 
 export const dataInfo = [
   {

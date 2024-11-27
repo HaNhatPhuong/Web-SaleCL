@@ -1,12 +1,12 @@
-import { useContext } from 'react';
-import styles from './styles.module.scss';
 import { SideBarContext } from '@/contexts/SideBarProvider';
-import classNames from 'classnames';
-import { AiOutlineClose } from 'react-icons/ai';
-import Login from '@components/ContentSideBar/Login/Login';
-import Compare from '@components/ContentSideBar/Compare/Compare';
 import Cart from '@components/ContentSideBar/Cart/Cart';
+import Compare from '@components/ContentSideBar/Compare/Compare';
+import Login from '@components/ContentSideBar/Login/Login';
 import Wishlist from '@components/ContentSideBar/WishLish/WishList';
+import classNames from 'classnames';
+import { useContext } from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
+import styles from './styles.module.scss';
 function SideBar() {
   const { container, overlay, sideBar, slideSideBar, boxIcon } = styles;
   const { isOpen, setIsOpen, type } = useContext(SideBarContext);

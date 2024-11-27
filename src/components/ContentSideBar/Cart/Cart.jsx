@@ -1,8 +1,8 @@
-import HeaderSideBar from '@components/ContentSideBar/components/HeaderSideBar/HeaderSideBar';
-import styles from './styles.module.scss';
-import ItemProducts from '@components/ContentSideBar/components/ItemProducts/ItemProducts';
 import Button from '@components/Button/Button';
+import HeaderSideBar from '@components/ContentSideBar/components/HeaderSideBar/HeaderSideBar';
+import ItemProducts from '@components/ContentSideBar/components/ItemProducts/ItemProducts';
 import { PiShoppingCart } from 'react-icons/pi';
+import styles from './styles.module.scss';
 function Cart() {
   const { container, boxContent, boxBtn, total, price } = styles;
   return (

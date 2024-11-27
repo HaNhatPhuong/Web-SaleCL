@@ -1,14 +1,14 @@
-import Banner from '@components/Banner/Banner';
-import Myheader from '@components/Header/Header';
-import styles from './styles.module.scss';
-import Info from '@components/Info/Info';
-import AdvanceHeading from '@components/AdvanceHeading/AdvanceHeading';
-import HeadingList from '@components/HeadingList/HeadingList';
-import { useEffect, useState } from 'react';
 import { getProducts } from '@/apis/productService';
+import AdvanceHeading from '@components/AdvanceHeading/AdvanceHeading';
+import Banner from '@components/Banner/Banner';
+import Myfooter from '@components/Footer/Footer';
+import Myheader from '@components/Header/Header';
+import HeadingList from '@components/HeadingList/HeadingList';
+import Info from '@components/Info/Info';
 import PopularProduct from '@components/PopularProduct/PopularProduct';
 import SaleHomepage from '@components/SaleHomepage/SaleHomepage';
-import Myfooter from '@components/Footer/Footer';
+import { useEffect, useState } from 'react';
+import styles from './styles.module.scss';
 
 function Homepage() {
   const [listProducts, setListproducts] = useState([]);

@@ -1,10 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from '@components/Homepage/Homepage';
-import Blogs from '@components/Blogs/Blogs';
-import routers from '@/routers/routers';
-import { Suspense } from 'react';
 import { SideBarProvider } from '@/contexts/SideBarProvider';
+import routers from '@/routers/routers';
 import SideBar from '@components/SideBar/SideBar';
+import { Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (

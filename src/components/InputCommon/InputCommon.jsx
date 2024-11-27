@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import styles from './styles.module.scss';
 import { FaEye } from 'react-icons/fa';
 import { IoIosEyeOff } from 'react-icons/io';
+import styles from './styles.module.scss';
 function InputCommon({ label, type, isRequired = false, ...props }) {
   const { labelInput, boxInput, container, boxIcon, errMsg } = styles;
   const { formik, id } = props;

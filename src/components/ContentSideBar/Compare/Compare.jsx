@@ -1,8 +1,8 @@
 import Button from '@components/Button/Button';
-import styles from './styles.module.scss';
 import HeaderSideBar from '@components/ContentSideBar/components/HeaderSideBar/HeaderSideBar';
 import ItemProducts from '@components/ContentSideBar/components/ItemProducts/ItemProducts';
 import { TfiReload } from 'react-icons/tfi';
+import styles from './styles.module.scss';
 function Compare() {
   const { container, boxContent } = styles;
   return (

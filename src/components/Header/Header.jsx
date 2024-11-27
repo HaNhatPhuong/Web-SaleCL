@@ -1,15 +1,15 @@
+import { SideBarContext } from '@/contexts/SideBarProvider';
+import useScrollHandling from '@/hooks/useScrollHandling ';
+import classNames from 'classnames';
+import { useContext, useEffect, useState } from 'react';
+import { CiHeart } from 'react-icons/ci';
+import { PiShoppingCartLight } from 'react-icons/pi';
+import { TfiReload } from 'react-icons/tfi';
+import Logo from '../../assets/images/Logo-retina.png';
 import BoxIcon from './Boxicon/Boxicon';
 import { dataBoxicon, dataMenu } from './BoxIcon/contants';
 import Menu from './Menu/Menu';
 import styles from './styles.module.scss';
-import Logo from '../../assets/images/Logo-retina.png';
-import { TfiReload } from 'react-icons/tfi';
-import { CiHeart } from 'react-icons/ci';
-import { PiShoppingCartLight } from 'react-icons/pi';
-import useScrollHandling from '@/hooks/useScrollHandling ';
-import classNames from 'classnames';
-import { useContext, useEffect, useState } from 'react';
-import { SideBarContext } from '@/contexts/SideBarProvider';
 
 function Myheader() {
   const {
@@ -20,8 +20,8 @@ function Myheader() {
     container,
     fixedHeader,
     topHeader,
-    boxCart,
-    quantity,
+    // boxCart,
+    // quantity,
   } = styles;
 
   const { scrollPosition } = useScrollHandling();

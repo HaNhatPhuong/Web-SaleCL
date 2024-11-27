@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
 import useScrollHandling from '@/hooks/useScrollHandling ';
+import { useEffect, useState } from 'react';
 
 const useTranslateXImage = () => {
   const { scrollPosition, scrollDriction } = useScrollHandling();

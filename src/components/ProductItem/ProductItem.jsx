@@ -1,12 +1,7 @@
-import styles from './styles.module.scss';
-import redLoadIcon from '../../assets/icons/svgs/reload.svg';
-import heartIcon from '../../assets/icons/svgs/heart.svg';
-import cartIcon from '@icons/svgs/cart.svg';
-import eyes from '../../assets/icons/svgs/eyes.svg';
-import { TfiReload } from 'react-icons/tfi';
 import { CiHeart } from 'react-icons/ci';
-import { PiShoppingCartLight } from 'react-icons/pi';
-import { PiEyeLight } from 'react-icons/pi';
+import { PiEyeLight, PiShoppingCartLight } from 'react-icons/pi';
+import { TfiReload } from 'react-icons/tfi';
+import styles from './styles.module.scss';
 
 function ProductItem({ src, prevSrc, namee, price }) {
   const {
