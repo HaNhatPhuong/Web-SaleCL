@@ -3,8 +3,10 @@ import InputCommon from '@components/InputCommon/InputCommon';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import styles from './styles.module.scss';
+import { useState } from 'react';
 function Login() {
   const { container, title, boxRememberMe, lostPw } = styles;
+  const [isRegister, setIsRegister] = useState(false);
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -15,14 +17,23 @@ function Login() {
       password: Yup.string()
         .min(6, 'Password must be at least 6 characters')
         .required('Password is Required'),
+      cfmpassword: Yup.string().oneOf(
+        [Yup.ref('password'), null],
+        'Passwords must match'
+      ),
     }),
     onSubmit: (values) => {
       console.log(values);
     },
   });
+
+  const handleToggle = () => {
+    setIsRegister(!isRegister);
+    formik.resetForm();
+  };
   return (
     <div className={container}>
-      <div className={title}>Sign In</div>
+      <div className={title}>{isRegister ? 'SIGN UP' : 'SIGN IN'}</div>
       <form onSubmit={formik.handleSubmit}>
         <InputCommon
           id='email'
@@ -40,13 +51,34 @@ function Login() {
           formik={formik}
         />
 
-        <div className={boxRememberMe}>
-          <input type='checkbox' />
-          <span>Remember Me</span>
-        </div>
-        <Button content={'LOGIN'} type='submit' />
+        {isRegister && (
+          <InputCommon
+            id='cfmpassword'
+            label='Confirm password'
+            type='password'
+            isRequired
+            formik={formik}
+          />
+        )}
+
+        {!isRegister && (
+          <div className={boxRememberMe}>
+            <input type='checkbox' />
+            <span>Remember me</span>
+          </div>
+        )}
+        <Button content={isRegister ? 'REGISTER' : 'LOGIN'} type='submit' />
       </form>
-      <div className={lostPw}>Lost Your Password?</div>
+      <Button
+        content={
+          isRegister ? 'Already have an account?' : 'Don’t have an account?'
+        }
+        type='submit'
+        isPriamry={false}
+        style={{ marginTop: '10px' }}
+        onClick={handleToggle}
+      />
+      {!isRegister && <div className={lostPw}>Lost your password?</div>}
     </div>
   );
 }
