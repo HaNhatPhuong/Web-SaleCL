@@ -55,8 +55,16 @@
   cursor: pointer;
   padding-top: 8px;
   color: $primary_color;
+  position: relative;
   // display: flex;
   // align-items: center;
+  .subMenu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    top: 40px;
+  }
 }
 
 .menu::after {
