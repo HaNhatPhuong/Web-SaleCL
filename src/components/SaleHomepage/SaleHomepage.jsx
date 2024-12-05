@@ -15,10 +15,7 @@ function SaleHomepage() {
           transition: 'transform 0.4s ease',
         }}
       >
-        <img
-          src='https://xstore.8theme.com/elementor2/marseille04/wp-content/uploads/sites/2/2022/12/Image_1.jpeg'
-          alt=''
-        />
+        <img src='/src/assets/images/Salehomepage1.jpeg' alt='' />
       </div>
       <div className={text}>
         <h2 className={title}>Sale of the year</h2>
@@ -36,10 +33,7 @@ function SaleHomepage() {
           transition: 'transform 0.6s ease',
         }}
       >
-        <img
-          src='https://xstore.8theme.com/elementor2/marseille04/wp-content/uploads/sites/2/2022/12/Image_2.jpeg'
-          alt=''
-        />
+        <img src='/src/assets/images/Salehomepage2.jpeg' alt='' />
       </div>
     </div>
   );
