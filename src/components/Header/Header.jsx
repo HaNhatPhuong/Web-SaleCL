@@ -6,10 +6,11 @@ import { CiHeart } from 'react-icons/ci';
 import { PiShoppingCartLight } from 'react-icons/pi';
 import { TfiReload } from 'react-icons/tfi';
 import Logo from '../../assets/images/Logo-retina.png';
-import BoxIcon from './Boxicon/Boxicon';
+// import BoxIcon from '@components/Boxicon/Boxicon';
 import { dataBoxicon, dataMenu } from './BoxIcon/contants';
 import Menu from './Menu/Menu';
 import styles from './styles.module.scss';
+import BoxIcon from '@components/Header/BoxIcon/BoxIcon';
 
 function Myheader() {
   const {
